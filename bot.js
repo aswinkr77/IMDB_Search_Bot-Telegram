@@ -10,23 +10,23 @@ const bot = new Telegraf(tgToken);
 const botGithubLink = "";
 
 const startMessage = `
-    Welcome to IMDB Search Bot
-    This bot makes use of the IMDB database to work
-    For more information get help: /help
+Welcome to IMDB Search Bot
+This bot makes use of the IMDB database to work
+For more information use /help command
 
-    Property of the Creator
-    Bot details can be found here:
+Property of the Creator
+Bot details can be found here:
 
 `;
 
 const errorMessage = `
-    Oops...........
-    An unexpected error occured
-    Please try again after sometime
+Oops...........
+An unexpected error occured
+Please try again after sometime
 `;
 
 const helpMessage = `
-    You can search for movies, series and episodes using their specific command
+You can search for movies, series and episodes using some simple commands
 
     /movie : for searching movies
     /series : for searching series
@@ -37,9 +37,9 @@ const helpMessage = `
     /series dark
     /episode london
 
-    Note:
-    Only the top 5 results will be displayed.
-    Since this bot uses unofficial IMDB api, there is a daily limit for api request
+Note:
+Only the top 5 results will be displayed.
+Since this bot uses an unofficial IMDB api, there is a limit for api request
 `;
 
 bot.start((ctx) => {
@@ -70,9 +70,7 @@ let sendFunction = ((ctx, command) => {
             let search = data["data"]["results"];
             if(search.length == 0)
             {
-                ctx.reply(`
-                Oops no such ${command}....
-                If you think the bot have made a mistake, please make sure the ${command} name is correct`);
+                ctx.reply(`Oops no such ${command}....\nIf you think the bot have made a mistake, please make sure the ${command} name is correct`);
             }
             else
             {
