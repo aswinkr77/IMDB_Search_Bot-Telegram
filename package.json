@@ -4,7 +4,8 @@
   "description": "IMDB Search Bot is a Telegram bot, which can be used for searching movies, series and episodes in IMDB Database. The bot makes use of an unofficial IMDB API.",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
   },
   "keywords": [
     "heroku",
