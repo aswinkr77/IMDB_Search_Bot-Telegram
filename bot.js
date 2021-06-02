@@ -22,7 +22,7 @@ ${botGithubLink}
 const errorMessage = `
 Oops...........
 An unexpected error occured
-Please try again after sometime
+Please try again after sometime or maybe tomorrow
 `;
 
 const helpMessage = `
