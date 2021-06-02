@@ -87,7 +87,7 @@ let sendFunction = ((ctx, command) => {
                         caption: `${title} ${para}`
                     });
                     
-                    if(i >= 5)
+                    if(i >= 4)
                         break;
                 }
             }
