@@ -58,6 +58,7 @@ bot.help((ctx) => {
 });
 
 let sendFunction = ((ctx, command) => {
+    command = command.charAt(0).toUpperCase() + command.slice(1);
     let input = ctx.message.text.split(" ");
 
     if(input.length == 1)
@@ -70,15 +71,13 @@ let sendFunction = ((ctx, command) => {
     {
         input.shift();
         input = input.join(" ");
-        let url = `https://imdb-api.com/en/API/SearchSeries/${apiKey}/${input}`;
+        let url = `https://imdb-api.com/en/API/Search${command}/${apiKey}/${input}`;
         Axios.get(url)
         .then(data => {
  
             let search = data["data"]["results"];
             if(search.length == 0)
-            {
                 ctx.reply(`Oops no such ${command}....\nIf you think the bot have made a mistake, please make sure the ${command} name is correct`);
-            }
             else
             {
                 let title, source, para;
@@ -86,8 +85,12 @@ let sendFunction = ((ctx, command) => {
                 for(let i = 0; i < search.length; ++i)
                 {
                     title = search[i]["title"];
-                    source = search[i]["image"].replace("original", "300x500");
+                    source = search[i]["image"];
                     para = search[i]["description"];
+
+                    if(!source.includes("nopicture"))
+                        source = source.replace("original", "300x500");
+
                     bot.telegram.sendPhoto(
                         chatId, 
                         `${source}`, {
