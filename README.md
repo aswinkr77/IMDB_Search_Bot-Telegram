@@ -5,15 +5,15 @@ The bot makes use of an unofficial IMDB API, for more information about it go [h
 
 ## Basic Commands
 
-```js
-/help - To display help and all other commands can be found here
-/movie - To search movies
-/series - To search series
-/episode - To search episodes
+```
+/help - to display help and all other commands can be found here
+/movie - to search movies
+/series - to search series
+/episode - to search episodes
 
 ```
 ### Examples:
-```js
+```
 /movie arrival
 /series stranger things
 /episode london
