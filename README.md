@@ -10,14 +10,12 @@ The bot makes use of an unofficial IMDB API, for more information about it go [h
 /movie - to search movies
 /series - to search series
 /episode - to search episodes
-
 ```
 ### Examples:
 ```
 /movie arrival
 /series stranger things
 /episode london
-
 ```
 
 The bot will only display the first 5 results.
