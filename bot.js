@@ -1,7 +1,14 @@
-import { Telegraf } from 'telegraf';
-import Axios from 'axios';
-import dotenv from 'dotenv';
-dotenv.config();
+const { Telegraf } = require('telegraf');
+const express = require('express');
+const Axios = require('axios');
+require('dotenv').config();
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log(`${port}`);
+});
 
 const apiKey = process.env.IMBD_API_KEY;
 const tgToken = process.env.BOT_TOKEN;

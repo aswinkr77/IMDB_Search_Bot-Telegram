@@ -17,9 +17,9 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "telegraf": "^4.3.0"
   },
-  "type": "module",
   "engines": {
     "node": "15.3.0",
     "npm": "7.13.0"
