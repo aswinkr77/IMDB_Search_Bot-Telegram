@@ -22,9 +22,10 @@ The bot makes use of an unofficial IMDB API, for more information about it go [h
 
 The bot will only display the first 5 results.
 
-## Libraries Used:
+## Frameworks & Libraries Used:
 ```js
 telegraf
+express
 dotenv
 axios
 ```
